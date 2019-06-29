@@ -1,0 +1,44 @@
+{% extends "common/base.html" %}
+
+{% block header %}
+{% include "common/header.html" %}
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <div class="row">
+        {% for teacher in teachers %}
+        <div class="col-md-3 my-2">
+            <div class="view overlay">
+                <img class="card-img-top" src="{{ teacher.image.url }}" alt="Card image cap" height="200px">
+                <a href="#!">
+                    <div class="mask rgba-white-slight"></div>
+                </a>
+            </div>
+            <!-- Card content -->
+            <div class="card-body">
+
+                <!-- Title -->
+                <h4 class="card-title">{{ teacher.name }}</h4>
+                <!-- Text -->
+                <p class="card-text">
+                    Subject: {{ teacher.subject }} <br>
+                    Contact: {{ teacher.phone }}<br>
+                    E-mail: {{ teacher.email }}<br>
+                    NID: {{ teacher.nid }}<br>
+                    Gender: {{ teacher.gender }}<br>
+                    Address: {{ teacher.address }}
+                </p>
+
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+<!-- Card -->
+
+{% endblock %}
+
+{% block footer %}
+{% include "common/footer.html" %}
+{% endblock %}

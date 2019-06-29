@@ -1,0 +1,141 @@
+{% extends "common/base.html" %}
+
+{% block header %}
+{% include "common/header.html" %}
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <div class="container my-2">
+        <div class="row">
+            <div class="col-md-2">
+                    <p>Name of Student</p>
+                    <p>Father's Name</p>
+                    <p>Mother's Name</p>
+                    <p>Roll Number</p>
+                    <p>Contact</p>
+                    <p>Group</p>
+                    <p>Session</p>
+                    <p>Gender</p>
+                    <p>Address</p>
+            </div>
+            <div class="col-md-1">
+                    <p>:</p>
+                    <p>:</p>
+                    <p>:</p>
+                    <p>:</p>
+                    <p>:</p>
+                    <p>:</p>
+                    <p>:</p>
+                    <p>:</p>
+                    <p>:</p>
+            </div>
+            <div class="col-7 text-left">
+                    <p>{{ student.name }}</p>
+                    <p>{{ student.father }}</p>
+                    <p>{{ student.mother }}</p>
+                    <p>{{ student.roll }}</p>
+                    <p>{{ student.phone }}</p>
+                    <p>{{ student.group }}</p>
+                    <p>{{ student.session }}</p>
+                    <p>{{ student.gender }}</p>
+                    <p>{{ student.address }}</p>
+            </div>
+            
+        </div>
+    </div>
+    <table class="table table-bordered mt-2">
+        <thead>
+            <tr>
+                <th scope="col-1">Sl. No.</th>
+                <th scope="col-7">Name of Subjects</th>
+                <th scope="col-1">Letter Grade</th>
+                <th scope="col-1">Grade Point</th>
+                <th scope="col-1">GPA<br>(Without additional subject)</th>
+                <th scope="col-1">GPA</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Bangla</td>
+                <td>{{ bangla_grade }}</td>
+                <td>{{ bangla_point }}</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>English</td>
+                <td>{{ english_grade }}</td>
+                <td>{{ english_point }}</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>Mathematics</td>
+                <td>{{ math_grade }}</td>
+                <td>{{ math_point }}</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th scope="row">4</th>
+                <td>Social Science</td>
+                <td>{{ social_grade }}</td>
+                <td>{{ social_point }}</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th scope="row">5</th>
+                <td>Religion</td>
+                <td>{{ religion_grade }}</td>
+                <td>{{ religion_point }}</td>
+                <td>{{ cgpa }}</td>
+                <td>5.00</td>
+            </tr>
+            <tr>
+                <th scope="row">6</th>
+                <td>Physics</td>
+                <td>{{ physics_grade }}</td>
+                <td>{{ physics_point }}</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th scope="row">7</th>
+                <td>Chemsitry</td>
+                <td>{{ chemistry_grade }}</td>
+                <td>{{ chemistry_point }}</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th scope="row">8</th>
+                <td>Higher Mathematics</td>
+                <td>{{ h_math_grade }}</td>
+                <td>{{ h_math_point }}</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Additional Subject:</td>
+            </tr>
+            <tr>
+                <th scope="row">9</th>
+                <td>Biology</td>
+                <td>{{ biology_grade }}</td>
+                <td>{{ biology_point }}</td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+{% endblock %}
+
+{% block footer %}
+{% include "common/footer.html" %}
+{% endblock %}

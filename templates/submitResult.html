@@ -1,0 +1,28 @@
+{% extends "common/base.html" %}
+
+{% block header %}
+{% include "common/header.html" %}
+{% endblock %}
+
+{% block body %}
+
+<div class="container my-2">
+        <div class="alert alert-primary" role="alert">
+                Upload Your Excel File
+        </div>
+    <form method="post" enctype="multipart/form-data">
+        
+        {% csrf_token %}
+        <hr>
+        {{ form.as_p }}
+        <hr>
+        <button class="btn btn-primary" type="submit">Upload</button>
+    </form>
+</div>
+<!-- Card -->
+
+{% endblock %}
+
+{% block footer %}
+{% include "common/footer.html" %}
+{% endblock %}
